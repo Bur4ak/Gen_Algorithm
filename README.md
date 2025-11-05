@@ -50,28 +50,3 @@ class Rocket:
         if obstacle.collidepoint(self.pos.x, self.pos.y):
             self.crashed = True
 
-
-### **Population Class**
-Handles all rockets and manages evolution:
-```python
-class Population:
-    def evaluate(self):
-        max_fit = max(r.fitness for r in self.rockets)
-        for r in self.rockets:
-            r.fitness /= max_fit
-        self.mating_pool = []
-        for r in self.rockets:
-            n = int(r.fitness * 100)
-            self.mating_pool += [r] * n
-
-Genetic Algorithm Steps
-
-Create initial population
-
-Run simulation for set lifespan
-
-Evaluate fitness
-
-Select best rockets
-
-Breed next generation
