@@ -43,10 +43,12 @@ class Rocket:
     def update(self, step):
         self.apply_force(self.dna[step])
         self.vel += self.acc
-        self.pos += self.vel
+        self.pos += self.<img width="795" height="590" alt="Screenshot_9" src="https://github.com/user-attachments/assets/f2763af3-fb3b-4af7-a6e6-8c068e0e9455" />
+vel
         self.acc *= 0
         if (target - self.pos).length() < 10:
-            self.completed = True
+            self.completed<img width="635" height="505" alt="Screenshot_8" src="https://github.com/user-attachments/assets/27bbfc25-44a2-4b9f-b4b3-2460c4b73522" />
+ = True
         if obstacle.collidepoint(self.pos.x, self.pos.y):
             self.crashed = True
 
